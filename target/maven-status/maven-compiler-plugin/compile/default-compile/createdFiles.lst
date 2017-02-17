@@ -1,0 +1,5 @@
+model/User.class
+dao/DAO.class
+local/cassie/app/KunderaExample.class
+dao/UserDAO.class
+local/cassie/app/Main.class
