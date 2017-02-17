@@ -17,8 +17,8 @@ To clean the project and load your changes:
 learning-cassandra$ mvn clean install
 ```
 
-[Cassandra]http://cassandra.apache.org/  
-[DeepLIBRAS]https://github.com/deeplibras  
-[Java]https://www.java.com/  
-[Kundera]https://github.com/impetus-opensource/Kundera  
-[Maven]https://maven.apache.org/
+[Cassandra]: http://cassandra.apache.org/  
+[DeepLIBRAS]: https://github.com/deeplibras  
+[Java]: https://www.java.com/  
+[Kundera]: https://github.com/impetus-opensource/Kundera  
+[Maven]: https://maven.apache.org/
