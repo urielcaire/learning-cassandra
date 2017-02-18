@@ -7,6 +7,19 @@ Here I will learn Cassandra, a great NoSQL database that will be used in the [De
 + [Kundera]
 + [Maven]
 
+###Configurations
++ Java 8
++ Cassandra 2.2.8: more stable and more recommended
++ CQL(Cassandra Query Language) 3.3.1
++ Kundera 3.7
++ Maven 3.0.5
+---
+In **cassandra.yaml:**  
+```
+start_rpc: true  
+rpc_port: 9160
+native_transport_port: 9042
+```
 ###Run Project
 To run it with Maven:
 ```
@@ -19,6 +32,6 @@ learning-cassandra$ mvn clean install
 
 [Cassandra]: http://cassandra.apache.org/  
 [DeepLIBRAS]: https://github.com/deeplibras  
-[Java]: https://www.java.com/  
+[Java]: https://docs.oracle.com/javase/8/docs/ 
 [Kundera]: https://github.com/impetus-opensource/Kundera  
 [Maven]: https://maven.apache.org/
