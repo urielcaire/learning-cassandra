@@ -2,6 +2,7 @@ package local.cassie.app;
 
 import dao.UserDAO;
 import java.io.Console;
+import java.util.List;
 import model.User;
 
 public class Main{
@@ -26,7 +27,7 @@ public class Main{
 			switch(opt){
 				case 1:
 					dao = new UserDAO();
-
+					System.out.println("================================");
 					User usuario = new User();
 					usuario.setUserId(csl.readLine("ID: "));
 					usuario.setFirstName(csl.readLine("First Name: "));
@@ -40,15 +41,29 @@ public class Main{
 					
 					break;
 				case 2: 
+					dao = new UserDAO();
+					List<User> users = dao.getAll();
+					for(int i = 0; i < users.size(); i++){
+						System.out.println("==============USER=============");
+						System.out.println("ID: "+users.get(i).getUserId());
+						System.out.println("First Name: "+users.get(i).getFirstName());
+						System.out.println("Last Name: "+users.get(i).getLastName());
+						System.out.println("Bytes: "+users.get(i).getB());
+						System.out.println("================================");
+					}
 					break;
 				case 3:
 					dao = new UserDAO();
+					System.out.println("================================");
 					usr = dao.getById(csl.readLine("User ID for search:"));
 					System.out.println("=============RESULTS============");
 					if(usr != null){
+						System.out.println("==============USER=============");
+						System.out.println("ID: "+usr.getUserId());
 						System.out.println("First Name: "+usr.getFirstName());
 						System.out.println("Last Name: "+usr.getLastName());
 						System.out.println("Bytes: "+usr.getB());
+						System.out.println("================================");
 					}else{
 						System.out.println("Not Found");
 					}
@@ -56,6 +71,7 @@ public class Main{
 					break;
 				case 4: 
 					dao = new UserDAO();
+					System.out.println("================================");
 					dao.removeById(csl.readLine("User ID for search:"));
 					System.out.println("=============RESULTS============");
 					System.out.println("=============REMOVED============");

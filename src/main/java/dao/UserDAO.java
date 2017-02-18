@@ -29,6 +29,6 @@ public class UserDAO extends DAO<User>{
 	}
 	
 	public List<User> getAll(){
-		return entityManager.createQuery("FROM users").getResultList();
+		return entityManager.createQuery("select u from User u").getResultList();
 	}
 }
