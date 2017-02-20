@@ -2,6 +2,7 @@ package local.cassie.app;
 
 import dao.UserDAO;
 import java.io.Console;
+import java.nio.charset.Charset;
 import java.util.List;
 import model.User;
 
@@ -48,7 +49,9 @@ public class Main{
 						System.out.println("ID: "+users.get(i).getUserId());
 						System.out.println("First Name: "+users.get(i).getFirstName());
 						System.out.println("Last Name: "+users.get(i).getLastName());
-						System.out.println("Bytes: "+users.get(i).getB());
+						byte[] bytes = users.get(i).getB();
+						String bString = new String(bytes, Charset.forName("UTF-8"));
+						System.out.println("Bytes: "+bString);
 						System.out.println("================================");
 					}
 					break;
