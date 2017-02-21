@@ -27,7 +27,7 @@ learning-cassandra$ mvn exec:java -Dexec.mainClass="local.cassie.app.Main"
 ```
 To clean the project and load your changes:
 ```
-learning-cassandra$ mvn clean install
+learning-cassandra$ mvn clean compile
 ```
 
 [Cassandra]: http://cassandra.apache.org/  
