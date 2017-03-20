@@ -1,13 +1,13 @@
-#Learning Cassandra
+# Learning Cassandra
 Here I will learn Cassandra, a great NoSQL database that will be used in the [DeepLIBRAS] research project :blue_heart:  
 
-###This project uses
+### This project uses
 + [Cassandra] 
 + [Java]
 + [Kundera]
 + [Maven]
 
-###Configurations
+### Configurations
 + Java 8
 + Cassandra 2.2.8: more stable and more recommended
 + CQL(Cassandra Query Language) 3.3.1
@@ -20,7 +20,7 @@ start_rpc: true
 rpc_port: 9160
 native_transport_port: 9042
 ```
-###Run Project
+### Run Project
 To run it with Maven:
 ```
 learning-cassandra$ mvn exec:java -Dexec.mainClass="local.cassie.app.Main"
