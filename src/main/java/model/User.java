@@ -29,6 +29,8 @@ public class User
     @Column(name="vetor_btes")
     private byte[] b;
 
+    //this will generate the following error in console:
+    //'Super Columns not supported by cql, Any operation on supercolumn family will be executed using thrift, returning false.'
     @ElementCollection
     private Map<String, Address> addresses =  new HashMap<String, Address>();
 
