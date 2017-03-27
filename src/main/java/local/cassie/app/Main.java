@@ -5,6 +5,7 @@ import java.io.Console;
 import java.nio.charset.Charset;
 import java.util.List;
 import model.User;
+import model.Address;
 
 public class Main{
 	public static void main(String[] args){
@@ -37,6 +38,8 @@ public class Main{
 					String stg = csl.readLine("String to Bytes: ");
 					byte[] b = stg.getBytes();
 					usuario.setB(b);
+					Address end = new Address("Rua João da Silva n 10", "Parati");
+					usuario.addAddress(end);
 
 					dao.persist(usuario);
 					

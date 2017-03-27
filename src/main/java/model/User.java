@@ -1,7 +1,12 @@
 package model;
 
+import model.Address;
+import java.util.Map;
+import java.util.HashMap;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Embedded;
+import javax.persistence.ElementCollection;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -22,10 +27,14 @@ public class User
     private String city;
 
     @Column(name="vetor_btes")
-    private byte[] b;    
+    private byte[] b;
+
+    @ElementCollection
+    private Map<String, Address> addresses =  new HashMap<String, Address>();
 
     public User()
     {
+
     }
 
     public String getUserId()
@@ -61,9 +70,12 @@ public class User
         this.city = city;
     }
     public byte[] getB(){
-	return b;
+	   return b;
     }
     public void setB(byte[] b){
-	this.b = b;
+	   this.b = b;
     } 
+    public void addAddress(Address address){
+        this.addresses.put("Uma String", address);
+    }
 }
